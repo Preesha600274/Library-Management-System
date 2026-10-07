@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LibraryHub | Smart Library Management</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                📚
+            </div>
+
+            <div>
+                <h2>LibraryHub</h2>
+                <span>Smart Library Management</span>
+            </div>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#dashboard">Dashboard</a>
+
+            <a href="#books">Books</a>
+
+            <a href="#members">Members</a>
+
+            <a href="#transactions">Issue & Return</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="dashboard">
+
+        <div class="hero-decoration decoration-one"></div>
+        <div class="hero-decoration decoration-two"></div>
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ✦ YOUR DIGITAL LIBRARY
+            </div>
+
+            <h1>
+                Where every
+                <span>book</span>
+                finds its place.
+            </h1>
+
+            <p>
+                A beautifully simple way to manage books, members,
+                borrowing and returns — all from one smart dashboard.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#books" class="hero-primary">
+                    Explore Collection
+                    <span>→</span>
+                </a>
+
+                <a href="#transactions" class="hero-secondary">
+                    Manage Books
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+                ✨ Simple &nbsp; • &nbsp; Fast &nbsp; • &nbsp; Organized
+            </div>
+
+        </div>
+
+
+        <!-- BOOK ILLUSTRATION -->
+
+        <div class="hero-art">
+
+            <div class="art-glow"></div>
+
+            <div class="floating-card floating-card-top">
+                <span>📖</span>
+                <div>
+                    <strong>Books</strong>
+                    <small>Organized</small>
+                </div>
+            </div>
+
+
+            <div class="book-scene">
+
+                <div class="large-book book-pink">
+                    <span>READ</span>
+                </div>
+
+                <div class="large-book book-purple">
+                    <span>LEARN</span>
+                </div>
+
+                <div class="large-book book-blue">
+                    <span>GROW</span>
+                </div>
+
+                <div class="book-pages"></div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-bottom">
+
+                <div class="mini-avatar">
+                    👩🏻‍💻
+                </div>
+
+                <div>
+                    <strong>Library</strong>
+                    <small>Management</small>
+                </div>
+
+                <span class="online-dot"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= DASHBOARD STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stat-card stat-pink">
+
+            <div class="stat-icon">
+                📚
+            </div>
+
+            <div class="stat-info">
+
+                <span>Total Books</span>
+
+                <strong id="totalBooks">0</strong>
+
+            </div>
+
+            <div class="stat-shape"></div>
+
+        </div>
+
+
+        <div class="stat-card stat-mint">
+
+            <div class="stat-icon">
+                🌿
+            </div>
+
+            <div class="stat-info">
+
+                <span>Available</span>
+
+                <strong id="availableBooks">0</strong>
+
+            </div>
+
+            <div class="stat-shape"></div>
+
+        </div>
+
+
+        <div class="stat-card stat-lavender">
+
+            <div class="stat-icon">
+                📖
+            </div>
+
+            <div class="stat-info">
+
+                <span>Currently Issued</span>
+
+                <strong id="issuedBooks">0</strong>
+
+            </div>
+
+            <div class="stat-shape"></div>
+
+        </div>
+
+
+        <div class="stat-card stat-peach">
+
+            <div class="stat-icon">
+                👥
+            </div>
+
+            <div class="stat-info">
+
+                <span>Members</span>
+
+                <strong id="totalMembers">0</strong>
+
+            </div>
+
+            <div class="stat-shape"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BOOK MANAGEMENT ================= -->
+
+    <main>
+
+        <section class="section" id="books">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-kicker">
+                        01 · COLLECTION
+                    </span>
+
+                    <h2>
+                        Book Management
+                    </h2>
+
+                    <p>
+                        Build and organize your library collection.
+                    </p>
+
+                </div>
+
+                <div class="section-number">
+                    📚
+                </div>
+
+            </div>
+
+
+            <!-- ADD BOOK -->
+
+            <div class="content-card add-book-card">
+
+                <div class="card-title-row">
+
+                    <div class="title-icon pink-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <h3>Add a New Book</h3>
+
+                        <p>
+                            Enter the book information below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="bookForm">
+
+                    <div class="input-grid">
+
+                        <div class="input-box">
+
+                            <label for="title">
+                                Book Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="title"
+                                placeholder="The Alchemist"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="author">
+                                Author
+                            </label>
+
+                            <input
+                                type="text"
+                                id="author"
+                                placeholder="Paulo Coelho"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="isbn">
+                                ISBN
+                            </label>
+
+                            <input
+                                type="text"
+                                id="isbn"
+                                placeholder="9780061122415"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="category">
+                                Category
+                            </label>
+
+                            <input
+                                type="text"
+                                id="category"
+                                placeholder="Fiction"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="gradient-button pink-gradient"
+                    >
+                        Add Book
+                        <span>+</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="content-card search-card">
+
+                <div class="search-header">
+
+                    <div class="title-icon purple-icon">
+                        🔍
+                    </div>
+
+                    <div>
+
+                        <h3>Find a Book</h3>
+
+                        <p>
+                            Search by title, author or ISBN.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="search-row">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search your library..."
+                    >
+
+                    <button
+                        onclick="searchBooks()"
+                        class="gradient-button purple-gradient"
+                    >
+                        Search
+                    </button>
+
+                    <button
+                        onclick="loadBooks()"
+                        class="outline-button"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK TABLE -->
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>Book Inventory</h3>
+
+                        <p>
+                            Your complete collection at a glance.
+                        </p>
+
+                    </div>
+
+                    <div class="live-indicator">
+
+                        <span></span>
+
+                        Live
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Book</th>
+
+                                <th>Author</th>
+
+                                <th>ISBN</th>
+
+                                <th>Category</th>
+
+                                <th>Status</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="bookTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MEMBERS ================= -->
+
+        <section class="section members-section" id="members">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-kicker">
+                        02 · COMMUNITY
+                    </span>
+
+                    <h2>
+                        Member Management
+                    </h2>
+
+                    <p>
+                        Keep your library community organized.
+                    </p>
+
+                </div>
+
+                <div class="section-number purple-number">
+                    👥
+                </div>
+
+            </div>
+
+
+            <!-- ADD MEMBER -->
+
+            <div class="content-card member-card">
+
+                <div class="card-title-row">
+
+                    <div class="title-icon blue-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <h3>Register New Member</h3>
+
+                        <p>
+                            Add a new member to your library.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="memberForm">
+
+                    <div class="input-grid member-input-grid">
+
+                        <div class="input-box">
+
+                            <label for="memberName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="memberName"
+                                placeholder="Enter full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="memberEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="memberEmail"
+                                placeholder="name@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="memberPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="memberPhone"
+                                placeholder="10 digit number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="gradient-button blue-gradient"
+                    >
+                        Register Member
+                        <span>+</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- MEMBER TABLE -->
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>Registered Members</h3>
+
+                        <p>
+                            People currently part of your library.
+                        </p>
+
+                    </div>
+
+                    <div class="member-count">
+                        Community
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Name</th>
+
+                                <th>Email</th>
+
+                                <th>Phone</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="memberTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TRANSACTIONS ================= -->
+
+        <section class="section transactions-section" id="transactions">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-kicker">
+                        03 · TRANSACTIONS
+                    </span>
+
+                    <h2>
+                        Issue & Return
+                    </h2>
+
+                    <p>
+                        Manage borrowing activity with ease.
+                    </p>
+
+                </div>
+
+                <div class="section-number green-number">
+                    ↔
+                </div>
+
+            </div>
+
+
+            <div class="transaction-grid">
+
+
+                <!-- ISSUE -->
+
+                <div class="transaction-card issue-card">
+
+                    <div class="transaction-top">
+
+                        <div class="transaction-icon green-icon">
+                            📖
+                        </div>
+
+                        <span class="transaction-label">
+                            BORROW
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Issue a Book
+                    </h3>
+
+                    <p>
+                        Assign an available book to a registered
+                        library member.
+                    </p>
+
+
+                    <form id="issueForm">
+
+                        <div class="input-box">
+
+                            <label for="issueBookId">
+                                Book ID
+                            </label>
+
+                            <input
+                                type="number"
+                                id="issueBookId"
+                                placeholder="e.g. 1"
+                                min="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <label for="issueMemberId">
+                                Member ID
+                            </label>
+
+                            <input
+                                type="number"
+                                id="issueMemberId"
+                                placeholder="e.g. 1"
+                                min="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="gradient-button green-gradient full-button"
+                        >
+                            Issue Book
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- RETURN -->
+
+                <div class="transaction-card return-card">
+
+                    <div class="transaction-top">
+
+                        <div class="transaction-icon blue-icon">
+                            ↩
+                        </div>
+
+                        <span class="transaction-label blue-label">
+                            RETURN
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Return a Book
+                    </h3>
+
+                    <p>
+                        Mark a borrowed book as available for
+                        the next reader.
+                    </p>
+
+
+                    <form id="returnForm">
+
+                        <div class="input-box">
+
+                            <label for="returnBookId">
+                                Book ID
+                            </label>
+
+                            <input
+                                type="number"
+                                id="returnBookId"
+                                placeholder="e.g. 1"
+                                min="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="return-info">
+                            💡 Only currently issued books can be returned.
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="gradient-button blue-gradient full-button"
+                        >
+                            Return Book
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-decoration"></div>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                📚 <strong>LibraryHub</strong>
+            </div>
+
+            <p>
+                Making library management simple, organized and beautiful.
+            </p>
+
+            <div class="footer-line"></div>
+
+            <span>
+                Built with HTML · CSS · JavaScript · Flask · SQLite
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
